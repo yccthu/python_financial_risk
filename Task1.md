@@ -38,11 +38,11 @@ https://tianchi.aliyun.com/forum/postDetail?spm=5176.12281976.0.0.32ce22falA2vxS
 
 首先，我们先报名一下比赛，萌新的比赛都是个人赛，既友好也不虐汪汪。
 
-![image.png](attachment:8fbd09a0-9d72-457b-8383-b4f01c0b9cad.png)
+![微信截图_20200916000617](https://gitee.com/yccthu/screenshots/raw/master/img/20200916000806.png)
 
 登陆阿里云以后，找到学习赛，如上图一样，点击第一个赛事，同意协议后，就能看到下图的信息了。
 
-![image.png](attachment:4c7e3c22-1632-4bec-bdeb-4b7aeacc3f29.png)
+![微信截图_20200916000639](https://gitee.com/yccthu/screenshots/raw/master/img/20200916000818.png)
 
 我们可以看到比赛的状态会变成进行中，也可以加入官方交流的钉钉群，来进行讨论。当然，Datawhale的小朋友们，都有自己的学习群。
 
@@ -52,6 +52,8 @@ https://tianchi.aliyun.com/forum/postDetail?spm=5176.12281976.0.0.32ce22falA2vxS
 - 提交样例 Sample_submit.csv
 - 测试集 testA.csv
 - 训练集 train.csv
+
+![微信截图_20200916000646](https://gitee.com/yccthu/screenshots/raw/master/img/20200916000838.png)
 
 在做好了以上的准备后，我们终于可以开始第二步**了解学习目标**了！
 
@@ -203,9 +205,11 @@ AI最后生成的值是样本y的值为1的概率，这个值越大越好！
 
 伟大的苹果帝国缔造者（apple maker）乔布斯老先生于2011年去世了！
 
+![微信截图_20200916000657](https://gitee.com/yccthu/screenshots/raw/master/img/20200916000915.png)
+
 这里，让我们先设定一下：
 - 活着为阳性(+)，用**1**表示
-- 死了为阴性(-)，用**0**表示。
+- 死了为阴性(-)，用**0**表示
 
 你用一个AI，预测乔布斯的生死，有以下四种情况：
 
@@ -252,7 +256,7 @@ $$FPR = \frac{FP}{FP + TN}$$
 
 下面是一张描述ROC空间的图，我们可以看到三种模型的不同的ROC曲线。
 
-![image.png](attachment:3b47dc0d-2938-4d79-bc0e-815d312ac906.png)
+![微信截图_20200916000705](https://gitee.com/yccthu/screenshots/raw/master/img/20200916000930.png)
 
 在这里，我们需要重点关注一下，45°的线，**y=x**，这条线意味着真阳率和假阳率相等的情况，换成人话就是，**无论分类器把乔布斯分为死了还是活着，AI最终告诉你为活着的概率1都是均等的**。
 
@@ -302,6 +306,10 @@ $$F1-Score = \frac{2}{\frac{1}{Precision} + \frac{1}{Recall}}$$
 **8、P-R曲线（Precision-Recall Curve）**
 
 P-R曲线是描述精确率和召回率变化的曲线
+
+![微信截图_20200916000713](https://gitee.com/yccthu/screenshots/raw/master/img/20200916000957.png)
+
+
 
 **9. KS(Kolmogorov-Smirnov)**
 
@@ -387,14 +395,17 @@ t.head()
         vertical-align: middle;
     }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
+```css
+.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+```
 </style>
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -564,13 +575,15 @@ ta.head()
         vertical-align: middle;
     }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
+```css
+.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+```
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -744,13 +757,15 @@ t.select_dtypes(include = ['object']).head()
         vertical-align: middle;
     }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
+```css
+.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+```
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -824,14 +839,17 @@ ta.select_dtypes(include = ['object']).head()
         vertical-align: middle;
     }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
+```css
+.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+```
 </style>
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -905,13 +923,15 @@ t.select_dtypes(include = ['number']).head()
         vertical-align: middle;
     }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
+```css
+.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+```
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -1082,14 +1102,17 @@ ta.select_dtypes(include = ['number']).head()
         vertical-align: middle;
     }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
+```css
+.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+```
 </style>
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1718,7 +1741,7 @@ auc(fpr,tpr)
 - 结果csv格式
 - 大小为10M以内
 
-![image.png](attachment:01d89d6d-6cce-4af7-b0b9-becbfc760840.png)
+![微信截图_20200916000726](https://gitee.com/yccthu/screenshots/raw/master/img/20200916001211.png)
 
 【今日小结】
 
