@@ -7,7 +7,7 @@
 【声明】
 
 1. 本指南的制作基础灵感来源于开源组织Datawhale和天池官方联合发起的0基础入门系列赛事第四场 —— 零基础入门金融风控之贷款违约预测挑战赛。
-	赛题以金融风控中的个人信贷为背景，要求选手根据贷款申请人的数据信息预测其是否有违约的可能，以此判断是否通过此项贷款，这是一个典型的分类问题。通过这道赛题来引导大家了解金融风控中的一些业务背景，解决实际问题，帮助竞赛新人进行自我练习、自我提高。
+   赛题以金融风控中的个人信贷为背景，要求选手根据贷款申请人的数据信息预测其是否有违约的可能，以此判断是否通过此项贷款，这是一个典型的分类问题。通过这道赛题来引导大家了解金融风控中的一些业务背景，解决实际问题，帮助竞赛新人进行自我练习、自我提高。
 
 2. 之所以是避坑指南是因为本人在实践过程中过于小白，不懂如何规避各种坑，但又对于探索多种思路和路径有很多奇【keng】思【keng】妙【wa】想【wa】，由此，有了这个指南。
 
@@ -49,6 +49,7 @@ https://tianchi.aliyun.com/forum/postDetail?spm=5176.12281976.0.0.32ce22falA2vxS
 【下载数据】
 
 下载数据需要点击**赛题与数据**，下载三个数据集到你的jupyter notebook能够索引到的目标文件夹：
+
 - 提交样例 Sample_submit.csv
 - 测试集 testA.csv
 - 训练集 train.csv
@@ -60,6 +61,7 @@ https://tianchi.aliyun.com/forum/postDetail?spm=5176.12281976.0.0.32ce22falA2vxS
 ## 1 学习目标
 
 本次Task的学习目标有四：
+
 - 理解赛题数据
 - 明确目标
 - 熟悉评分体系
@@ -68,6 +70,7 @@ https://tianchi.aliyun.com/forum/postDetail?spm=5176.12281976.0.0.32ce22falA2vxS
 以上的目标都太不具体了，我不知道最后要做什么！
 
 **真.学习目标**:
+
 - 下载数据 （已完成）
 - 完成示例代码
 - 提交示例结果
@@ -208,6 +211,7 @@ AI最后生成的值是样本y的值为1的概率，这个值越大越好！
 ![微信截图_20200916000657](https://gitee.com/yccthu/screenshots/raw/master/img/20200916000915.png)
 
 这里，让我们先设定一下：
+
 - 活着为阳性(+)，用**1**表示
 - 死了为阴性(-)，用**0**表示
 
@@ -314,18 +318,20 @@ P-R曲线是描述精确率和召回率变化的曲线
 **9. KS(Kolmogorov-Smirnov)**
 
 K-S曲线与ROC曲线类似，不同在于
+
 - ROC曲线将真正例率和假正例率作为横纵轴
 - K-S曲线将真正例率和假正例率都作为纵轴，横轴则由选定的阈值来充当。
-公式如下：
-$$KS=max(TPR-FPR)$$
-KS不同代表的不同情况，一般情况KS值越大，模型的区分能力越强，但是也不是越大模型效果就越好，如果KS过大，模型可能存在异常，所以当KS值过高可能需要检查模型是否过拟合。以下为KS值对应的模型情况，但此对应不是唯一的，只代表大致趋势。
-|KS值|含义|白话|
-|-|-|-|
-|KS值<0.2|一般认为模型没有区分能力|智障AI，可以直接放弃|
-|KS值[0.2,0.3]|模型具有一定区分能力，勉强可以接受|三岁以前的AI宝宝|
-|KS值[0.3,0.5]|模型具有较强的区分能力|稍微开始靠谱的AI宝宝|
-|KS值[0.6,0.75]|模型具有非常强的区分能力|最理想的状态，可用来科研了|
-|KS值大于0.75|往往表示模型有异常|过拟合了啊！模型太完美不现实|
+  公式如下：
+  $$KS=max(TPR-FPR)$$
+  KS不同代表的不同情况，一般情况KS值越大，模型的区分能力越强，但是也不是越大模型效果就越好，如果KS过大，模型可能存在异常，所以当KS值过高可能需要检查模型是否过拟合。以下为KS值对应的模型情况，但此对应不是唯一的，只代表大致趋势。
+
+| KS值           | 含义                               | 白话                         |
+| -------------- | ---------------------------------- | ---------------------------- |
+| KS值<0.2       | 一般认为模型没有区分能力           | 智障AI，可以直接放弃         |
+| KS值[0.2,0.3]  | 模型具有一定区分能力，勉强可以接受 | 三岁以前的AI宝宝             |
+| KS值[0.3,0.5]  | 模型具有较强的区分能力             | 稍微开始靠谱的AI宝宝         |
+| KS值[0.6,0.75] | 模型具有非常强的区分能力           | 最理想的状态，可用来科研了   |
+| KS值大于0.75   | 往往表示模型有异常                 | 过拟合了啊！模型太完美不现实 |
 
 ### 2.4 Baseline代码
 
@@ -395,6 +401,7 @@ t.head()
         vertical-align: middle;
     }
 
+
 ```css
 .dataframe tbody tr th {
     vertical-align: top;
@@ -404,6 +411,7 @@ t.head()
     text-align: right;
 }
 ```
+
 </style>
 
 <table border="1" class="dataframe">
@@ -557,6 +565,7 @@ t.head()
   </tbody>
 </table>
 <p>5 rows × 47 columns</p>
+
 </div>
 
 
@@ -575,6 +584,7 @@ ta.head()
         vertical-align: middle;
     }
 
+
 ```css
 .dataframe tbody tr th {
     vertical-align: top;
@@ -584,7 +594,9 @@ ta.head()
     text-align: right;
 }
 ```
+
 </style>
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -736,6 +748,7 @@ ta.head()
   </tbody>
 </table>
 <p>5 rows × 46 columns</p>
+
 </div>
 
 
@@ -757,6 +770,7 @@ t.select_dtypes(include = ['object']).head()
         vertical-align: middle;
     }
 
+
 ```css
 .dataframe tbody tr th {
     vertical-align: top;
@@ -766,7 +780,9 @@ t.select_dtypes(include = ['object']).head()
     text-align: right;
 }
 ```
+
 </style>
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -821,6 +837,7 @@ t.select_dtypes(include = ['object']).head()
     </tr>
   </tbody>
 </table>
+
 </div>
 
 
@@ -839,6 +856,7 @@ ta.select_dtypes(include = ['object']).head()
         vertical-align: middle;
     }
 
+
 ```css
 .dataframe tbody tr th {
     vertical-align: top;
@@ -848,6 +866,7 @@ ta.select_dtypes(include = ['object']).head()
     text-align: right;
 }
 ```
+
 </style>
 
 <table border="1" class="dataframe">
@@ -904,6 +923,7 @@ ta.select_dtypes(include = ['object']).head()
     </tr>
   </tbody>
 </table>
+
 </div>
 
 
@@ -923,6 +943,7 @@ t.select_dtypes(include = ['number']).head()
         vertical-align: middle;
     }
 
+
 ```css
 .dataframe tbody tr th {
     vertical-align: top;
@@ -932,7 +953,9 @@ t.select_dtypes(include = ['number']).head()
     text-align: right;
 }
 ```
+
 </style>
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1084,6 +1107,7 @@ t.select_dtypes(include = ['number']).head()
   </tbody>
 </table>
 <p>5 rows × 42 columns</p>
+
 </div>
 
 
@@ -1102,6 +1126,7 @@ ta.select_dtypes(include = ['number']).head()
         vertical-align: middle;
     }
 
+
 ```css
 .dataframe tbody tr th {
     vertical-align: top;
@@ -1111,6 +1136,7 @@ ta.select_dtypes(include = ['number']).head()
     text-align: right;
 }
 ```
+
 </style>
 
 <table border="1" class="dataframe">
@@ -1264,6 +1290,7 @@ ta.select_dtypes(include = ['number']).head()
   </tbody>
 </table>
 <p>5 rows × 41 columns</p>
+
 </div>
 
 
@@ -1737,6 +1764,7 @@ auc(fpr,tpr)
 ### 4 经验总结
 
 【数据提交要求】
+
 - 只可提交2次
 - 结果csv格式
 - 大小为10M以内
@@ -1772,5 +1800,4 @@ Score
 
 
     <function __main__.Score(prob, P0=600, PDO=20, badrate=None, goodrate=None)>
-
 
